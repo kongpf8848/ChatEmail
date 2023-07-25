@@ -65,19 +65,12 @@ export const Upload = ({
         return true;
     };
 
-    const supportFileType = "pdf, epub, docx, txt, md, csv, json, zip, eml";
+    const supportFileType = "eml, msg";
 
     function validateFileType(fileType: string): boolean {
         switch (fileType) {
-            case "pdf":
-            case "epub":
-            case "docx":
-            case "txt":
-            case "md":
-            case "csv":
-            case "zip":
-            case "json":
             case "eml":
+            case "msg":
                 return true;
             default:
                 return false;

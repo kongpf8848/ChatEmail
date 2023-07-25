@@ -3,7 +3,7 @@ import {ChatBody} from '@/types';
 import wasm from '../../node_modules/@dqbd/tiktoken/lite/tiktoken_bg.wasm?module';
 import {getKeyConfiguration} from "@/utils/app/configuration";
 import {NextApiRequest, NextApiResponse} from "next";
-import {AIChatMessage, BaseChatMessage, HumanChatMessage} from "langchain/schema";
+import {AIMessage, HumanMessage} from "langchain/schema";
 import {getChatModel} from "@/utils/openai";
 import {ChatPromptTemplate, HumanMessagePromptTemplate} from "langchain/prompts";
 import {BufferMemory, ChatMessageHistory} from "langchain/memory";
@@ -21,12 +21,12 @@ const handler = async (req: NextApiRequest, res: NextApiResponse) => {
     input = messages[messages.length - 1].content;
   }
 
-  const historyMessages: BaseChatMessage[] = messages?.slice(0, messages.length - 1)
+  const historyMessages= messages?.slice(0, messages.length - 1)
   .map((message) => {
     if (message.role === 'user') {
-      return new HumanChatMessage(message.content);
+      return new HumanMessage(message.content);
     } else if (message.role === 'assistant') {
-      return new AIChatMessage(message.content);
+      return new AIMessage(message.content);
     }
     throw new TypeError('Invalid message role');
   });
