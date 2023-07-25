@@ -1,8 +1,9 @@
 version: '3'
+
 services:
-  chatemail:
-    image: kongpf8848/chatemail:latest
-    container_name: chatemail
+  chat-email:
+    image: kongpf8848/chat-email:latest
+    container_name: chat-email
     ports:
       - 3000:3000
     environment:
@@ -16,4 +17,4 @@ services:
       - SUPABASE_SERVICE_ROLE_KEY=${SUPABASE_SERVICE_ROLE_KEY}
       - SUPABASE_URL=${SUPABASE_URL}
       - NEXT_PUBLIC_CHAT_FILES_UPLOAD_PATH=public/uploads
-      - NEXT_PUBLIC_CHAT_FILES_MAX_SIZE=0
+      - NEXT_PUBLIC_CHAT_FILES_MAX_SIZE=10000000
