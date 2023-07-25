@@ -1,8 +1,8 @@
-version: '2.2'
+version: '3'
 services:
-  chatfiles:
-    image: guangzhengli/chatfiles:latest
-    container_name: chatfiles
+  chatemail:
+    image: kongpf8848/chatemail:latest
+    container_name: chatemail
     ports:
       - 3000:3000
     environment:

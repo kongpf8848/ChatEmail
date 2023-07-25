@@ -161,19 +161,16 @@ export const Chat: FC<Props> = memo(
                     {CHAT_FILES_MAX_SIZE != 0 &&
                         <>
                             <p className="mt-2 px-8 text-xs text-gray-500 dark:text-gray-400">This
-                                environment is only for trial and supports a maximum file size
+                                environment supports a maximum file size
                                 of {humanFileSize(CHAT_FILES_MAX_SIZE)}.</p>
+                            <p className="mt-2 px-8 text-xs text-gray-500 dark:text-gray-400">Upload 
+                                the email you'd like to chat with，then ask questions、 summarize email、 translate email content、 analyze email types...
+                            </p>
                             <p className="mt-2 px-8 text-xs text-gray-500 dark:text-gray-400">Here
                                 are some good starting questions:
                                 <a className="text-xs text-gray-500 dark:text-gray-400 underline"
-                                   href="https://github.com/guangzhengli/ChatFiles/blob/main/doc/Example.md"> Good
+                                   href="https://github.com/kongpf8848/ChatEmail/blob/master/doc/Example.md"> Good
                                     Examples .</a>
-                            </p>
-                            <p className="mt-2 px-8 text-xs text-gray-500 dark:text-gray-400">If
-                                you need to upload larger files, please deploy your own
-                                chatfiles by:
-                                <a className="text-xs text-gray-500 dark:text-gray-400 underline"
-                                   href="https://github.com/guangzhengli/ChatFiles"> ChatFiles</a>
                             </p>
                         </>
                     }

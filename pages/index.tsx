@@ -520,8 +520,8 @@ const Home: React.FC<HomeProps> = ({serverSideApiKeyIsSet}) => {
     return (
         <>
             <Head>
-                <title>ChatFiles</title>
-                <meta name="description" content="ChatGPT but better."/>
+                <title>ChatEmail</title>
+                <meta name="description" content="Chat with email."/>
                 <meta name="viewport"
                       content="height=device-height ,width=device-width, initial-scale=1, user-scalable=no"/>
                 <link rel="icon" href="/favicon.ico"/>
