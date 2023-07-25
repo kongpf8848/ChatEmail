@@ -1,0 +1,141 @@
+Received: from ME3P282MB3968.AUSP282.PROD.OUTLOOK.COM (2603:10c6:220:1b0::8)
+ by MEYP282MB1462.AUSP282.PROD.OUTLOOK.COM with HTTPS; Sat, 22 Jul 2023
+ 10:33:10 +0000
+Received: from DUZPR01CA0274.eurprd01.prod.exchangelabs.com
+ (2603:10a6:10:4b9::13) by ME3P282MB3968.AUSP282.PROD.OUTLOOK.COM
+ (2603:10c6:220:1b0::8) with Microsoft SMTP Server (version=TLS1_2,
+ cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id 15.20.6609.29; Sat, 22 Jul
+ 2023 10:33:08 +0000
+Received: from DU2PEPF0001E9C3.eurprd03.prod.outlook.com
+ (2603:10a6:10:4b9:cafe::db) by DUZPR01CA0274.outlook.office365.com
+ (2603:10a6:10:4b9::13) with Microsoft SMTP Server (version=TLS1_2,
+ cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id 15.20.6609.28 via Frontend
+ Transport; Sat, 22 Jul 2023 10:33:06 +0000
+Authentication-Results: spf=pass (sender IP is 192.30.252.205)
+ smtp.mailfrom=github.com; dkim=pass (signature was verified)
+ header.d=github.com;dmarc=pass action=none
+ header.from=github.com;compauth=pass reason=100
+Received-SPF: Pass (protection.outlook.com: domain of github.com designates
+ 192.30.252.205 as permitted sender) receiver=protection.outlook.com;
+ client-ip=192.30.252.205; helo=out-22.smtp.github.com; pr=C
+Received: from out-22.smtp.github.com (192.30.252.205) by
+ DU2PEPF0001E9C3.mail.protection.outlook.com (10.167.8.72) with Microsoft SMTP
+ Server (version=TLS1_2, cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id
+ 15.20.6609.24 via Frontend Transport; Sat, 22 Jul 2023 10:33:06 +0000
+X-IncomingTopHeaderMarker:
+ OriginalChecksum:6B94081133151A220B0B9CB07C1F41658450BF19A0B21CA55F4F24DFDD74B2F2;UpperCasedChecksum:241B3C18364E4038054A3ADF561B9ED3937EF3593C4C229612213324CF6B4E2F;SizeAsReceived:950;Count:11
+Received: from github.com (hubbernetes-node-c071bbc.ac4-iad.github.net [10.52.144.37])
+	by smtp.github.com (Postfix) with ESMTPA id CB1845E06EE;
+	Sat, 22 Jul 2023 03:33:05 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=github.com;
+	s=pf2023; t=1690021985;
+	bh=DZFEpA6lpJohNj58OxCYESrzN2g1ISvy8Vjt15Yt5b4=;
+	h=Date:From:To:Subject:From;
+	b=EwW5SNxhn2fZbaeYRBA1X8co8TYRyHau01ZfMTweR8EOEc1Yt6GFjRP/YkxuPmuLl
+	 hrjmgAccQWhmdb02PjpEOY2e4EfSu45ZQNwDlTy53XZ3S96n6q7RRGvglCgTGqfkOe
+	 ZQwjNYO1gr7BsxmqpU0FD9wiWmPAz0bUQiX6vgKk=
+Date: Sat, 22 Jul 2023 03:33:05 -0700
+From: GitHub <noreply@github.com>
+To: Jack kong <kongpf8848@gmail.com>
+Message-ID: <64bbb061c7afd_5088d0c08117c@lowworker-58686984b8-9xq87.mail>
+Subject: [GitHub] A personal access token (classic) has been added to your
+ account
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+X-Auto-Response-Suppress: All
+X-IncomingHeaderCount: 11
+Return-Path: noreply@github.com
+X-MS-Exchange-Organization-ExpirationStartTime: 22 Jul 2023 10:33:06.7366
+ (UTC)
+X-MS-Exchange-Organization-ExpirationStartTimeReason: OriginalSubmit
+X-MS-Exchange-Organization-ExpirationInterval: 1:00:00:00.0000000
+X-MS-Exchange-Organization-ExpirationIntervalReason: OriginalSubmit
+X-MS-Exchange-Organization-Network-Message-Id:
+ daaf3cdb-06b4-46ec-8419-08db8a9f0987
+X-EOPAttributedMessage: 0
+X-EOPTenantAttributedMessage: 84df9e7f-e9f6-40af-b435-aaaaaaaaaaaa:0
+X-MS-Exchange-Organization-MessageDirectionality: Incoming
+X-MS-PublicTrafficType: Email
+X-MS-TrafficTypeDiagnostic:
+ DU2PEPF0001E9C3:EE_|ME3P282MB3968:EE_|MEYP282MB1462:EE_
+X-MS-Exchange-Organization-AuthSource:
+ DU2PEPF0001E9C3.eurprd03.prod.outlook.com
+X-MS-Exchange-Organization-AuthAs: Anonymous
+X-MS-UserLastLogonTime: 7/22/2023 10:30:01 AM
+X-MS-Office365-Filtering-Correlation-Id: daaf3cdb-06b4-46ec-8419-08db8a9f0987
+X-MS-Exchange-EOPDirect: true
+X-Sender-IP: 192.30.252.205
+X-SID-PRA: NOREPLY@GITHUB.COM
+X-SID-Result: PASS
+X-MS-Exchange-Organization-PCL: 2
+X-MS-Exchange-Organization-SCL: 2
+X-Microsoft-Antispam: BCL:3;
+X-MS-Exchange-CrossTenant-OriginalArrivalTime: 22 Jul 2023 10:33:06.4553
+ (UTC)
+X-MS-Exchange-CrossTenant-Network-Message-Id: daaf3cdb-06b4-46ec-8419-08db8a9f0987
+X-MS-Exchange-CrossTenant-Id: 84df9e7f-e9f6-40af-b435-aaaaaaaaaaaa
+X-MS-Exchange-CrossTenant-AuthSource:
+ DU2PEPF0001E9C3.eurprd03.prod.outlook.com
+X-MS-Exchange-CrossTenant-AuthAs: Anonymous
+X-MS-Exchange-CrossTenant-FromEntityHeader: Internet
+X-MS-Exchange-CrossTenant-RMS-PersistedConsumerOrg:
+ 00000000-0000-0000-0000-000000000000
+X-MS-Exchange-Transport-CrossTenantHeadersStamped: ME3P282MB3968
+X-MS-Exchange-Transport-EndToEndLatency: 00:00:03.7817515
+X-MS-Exchange-Processed-By-BccFoldering: 15.20.6609.030
+X-Microsoft-Antispam-Mailbox-Delivery:
+	abwl:0;wl:0;pcwl:0;kl:0;dwl:0;dkl:0;rwl:0;ucf:0;jmr:0;ex:0;auth:1;dest:I;ENG:(5062000305)(90000117)(90012020)(91020020)(91040095)(9050020)(9100338)(944500132)(4810010)(4910033)(8820095)(9910022)(9545005)(10170022)(9320005);
+X-Message-Delivery: Vj0xLjE7dXM9MDtsPTE7YT0xO0Q9MTtHRD0xO1NDTD0tMQ==
+X-Microsoft-Antispam-Message-Info:
+	=?utf-8?B?Z1ZPbmhxS242dmlBTXEzU2FXSE5GRi91R2szME1FSnJudTdSNnFmcnNzekxO?=
+ =?utf-8?B?YzJDZm9XTnNGRC9XaFlCQ2cvdjJwMHJDVHBIenM5TGhsdXNRWTZ0Y2U5V3BG?=
+ =?utf-8?B?YTlHMVJPMTBzS1dycDA3TmRtMDNCMmVLbU1YbE1xYWdnL1o3TFlvcVJxQmIw?=
+ =?utf-8?B?Ly9rY3hOaU53ckRZaVVhU2xhaWIxL1lVR0I3U2x0VEprUk1YSWZFZFcvUUdr?=
+ =?utf-8?B?d09FV0YrOEZYbUNmQnJESmdRbFdBbGNEZzBhN1czWW50T0tCWEhJaC81emt2?=
+ =?utf-8?B?UzZPN1BIcitBVmwveHNwcjFZRlBYYlNBY0FoQjRieFpES1JqUWRsa3JjcHdv?=
+ =?utf-8?B?YkY0U3FlREoxOGdGWm4xZEZhTEt6eFdTak12ajV6S1pLMHBNd3o2T05YL3Jl?=
+ =?utf-8?B?M3JZUzFKcUJ4bzdxWmtqU0lnL1BFM25uLzE3MVlBRWwyU1RiS0FBTnA1SGZs?=
+ =?utf-8?B?eWlzZnJRZlg4U1ZRR2NDTXB4aUtnQXg2dGZYT3RUTUc1SlpqNjVSR0Y1YjIr?=
+ =?utf-8?B?Vm02Nm5sMWtacER4T3pycVhLU1RNUCtHYWlBY252cEhXeFhqelIzZytWYzN0?=
+ =?utf-8?B?NTdtZ0E4TmxRNmg2aXdnRU14TENWVDZMeFBSby9WWEFOTDFzZVdMZmRCcjhN?=
+ =?utf-8?B?bHl2K1VYY0ZYY1UwQXFsN3pZdER4Y2w4aXAxZTZsUm5pMytPVUlZWVVuVlFs?=
+ =?utf-8?B?TGladXRFalI0eGNFRUZtUVJYZXJFTnRtdGdCNWcrUVlLR3R2cGJDRnNGV0hG?=
+ =?utf-8?B?WkVRbzl0RUZObCthak1uc2dKMkZiMzhRSVFtTEdyQm85RmtwNjNacUdPTHo0?=
+ =?utf-8?B?ZVdjbXZnM2E3ODRqQkNrbUNmMEt1SmRkNjNLb05udzRleW9nR08vUDZUeS9a?=
+ =?utf-8?B?NkVlbmNlT3JUcllwNTJ0S1YzNG9OcElhUEJWcDZnYTBodWlqTlNPeTdMalY1?=
+ =?utf-8?B?d05DVVlpWE95djRTSnZRL0gzTWtJZ0R1SGNGemRzMDhFdDlndUYzNEg0RGJ5?=
+ =?utf-8?B?TWVzTnA5NDBnckUzYlBoWjZPNHVzY1FlNFN2aUJrcUpYYWdqeHdvb0xrMi85?=
+ =?utf-8?B?eVNGcHE2dVVLMStzdHRBbEhWdWxwNnBhWEE0RXdTS0xTYXlMQkRHR1hZYVg0?=
+ =?utf-8?B?ajhObDluZThDMDV3WTl0eHRHU1hjdm9tWHgvTjE2NXNIQ21RYzYvak9zWDVk?=
+ =?utf-8?B?Q29ScC9uemVFb3VKS1JYUGYvd0R3blN5WU9jeDlCZkswejZlNjZnWlpLZ09s?=
+ =?utf-8?B?RGtxM0pBa0RIRTYvUVZUNElNU1VvYWppSEd1T3orN2tEZ0hnaXdWcG1lbkt5?=
+ =?utf-8?B?YnZxaFA1dHNZUFM4WWFXeWNYOWdkQk5vNlJPTnk2WGs4ekpiTXU4Ri9tRzNp?=
+ =?utf-8?B?RTV4TlhHbzcxMkdzc2FScVZUOTNwWk04dGY5eGZHVmxkc3pXZmFYUWIvVzV0?=
+ =?utf-8?B?MHpkTjdZdm9IeThGN2Vxc01iTlNpbmtnR08rbWlad3NRTWZRUWhmall2djl3?=
+ =?utf-8?B?M3FIY0JYWVZpQ3dSajBNZU1hVFRjTnpWMTkzTlpqTlh6UklvU2tpd0t5d0Jh?=
+ =?utf-8?B?RkxuTVlEeHZtNExFMHBNVU9MUGFEdmxLVy9EREErZXZoeW9FTjhBV2tVTnlE?=
+ =?utf-8?B?dlk0YnRWazdObGpkNVhDcmxDZ2ViRnZONjErakM2OENCU1JGNGd0QVBKakdE?=
+ =?utf-8?B?UzhJbk9aSlpiRFAxc3J1WktoSzBDTU1JeDhFU3dFZVI1aUx3T0VvS3JQQnFs?=
+ =?utf-8?B?MUhvSjRyLzk4dHY0NVp2UlZYcHJ3bTl6VFY4MzJBNGdFZU5KVEEybnFGQ3VN?=
+ =?utf-8?B?M281TG9DM0I1aHh3VllZWEhsdkM0WFM0TUxZMjBtRlZZTmlHejdWSWExMG9K?=
+ =?utf-8?B?aWlVV1hiTnRhZzdRUzVwSlBqT2s0UmJFMDFBMWNRZkZJUGVNY1JieWhUSWlm?=
+ =?utf-8?B?UFB2N2ZPK21pZmp2VS8rUVBCYXBZeVhVUGV0NXp5OFdHcmJTTmIxQTVlbGIw?=
+ =?utf-8?B?QVRwVzFnUm1OTVlIaDA4NjhMZHFyd3BJeFpkTWJYZ3dPNmNRcXdaaTZqS0cv?=
+ =?utf-8?B?OWVNMm1WSnZ0YnFrNU51MzZmVG11V2ZQeWFDQ0ttRXBpUnZnVkdYejN6N3Bz?=
+ =?utf-8?B?TXlkOXRJVHZYRkN2WG5IQ2dGZkZTV3dqY25Pemh2Z3BWRm5KdWJuYjltQUtl?=
+ =?utf-8?B?eTdXaDZXTGZ0SkhleFJCSytCUHZZTnNUWVNwMk5zNmZuMXNTU0RkN0xXQnNE?=
+ =?utf-8?B?ZTRtL2V3Myt0bnkrWUJYZTNTakVRPT0=?=
+MIME-Version: 1.0
+
+Hey kongpf8848!
+
+A personal access token (classic) "windows-pc" with admin:enterprise, admin:gpg_key, admin:org, admin:org_hook, admin:public_key, admin:repo_hook, admin:ssh_signing_key, audit_log, codespace, copilot, delete:packages, delete_repo, gist, notifications, project, repo, user, workflow, write:discussion, and write:packages scopes was recently added to your account. Visit https://github.com/settings/tokens for more information.
+
+To see this and other security events for your account, visit https://github.com/settings/security-log
+
+If you run into problems, please contact support by visiting https://github.com/contact
+
+Thanks,
+The GitHub Team
+
