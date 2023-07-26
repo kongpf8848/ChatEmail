@@ -164,7 +164,7 @@ export const Chat: FC<Props> = memo(
                                 environment supports a maximum file size
                                 of {humanFileSize(CHAT_FILES_MAX_SIZE)}.</p>
                             <p className="mt-2 px-8 text-xs text-gray-500 dark:text-gray-400">Upload 
-                                the email you'd like to chat with，then ask questions、 summarize email、 translate email content、 analyze email types...
+                                the email you like to chat with，then ask questions、 summarize email、 translate email content、 analyze email types...
                             </p>
                             <p className="mt-2 px-8 text-xs text-gray-500 dark:text-gray-400">Here
                                 are some good starting questions:
