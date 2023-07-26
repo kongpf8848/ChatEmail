@@ -103,3 +103,37 @@ npm install
 npm run dev
 ```
 打开浏览器，访问[http://localhost:3000](http://localhost:300)
+
+### Docker部署
+
+构建镜像
+
+```shell
+docker build -t chatemail .
+```
+
+运行
+
+```shell
+docker run -d -p 3000:3000 \
+  --env SUPABASE_API_URL=xxx \
+  --env SUPABASE_API_KEY=xxx \
+  --env OPENAI_TYPE=OPENAI \
+  --env OPENAI_API_MODEL=gpt-3.5-turbo \
+  chatemail:latest
+```
+
+或者
+
+```shell
+docker run -d -p 3000:3000 \
+  --env SUPABASE_API_URL=xxx \
+  --env SUPABASE_API_KEY=xxx \
+  --env OPENAI_TYPE=AZURE_OPENAI \
+  --env AZURE_OPENAI_API_KEY=xxx \
+  --env AZURE_OPENAI_API_DEPLOYMENT_NAME=xxx \
+  --env AZURE_OPENAI_API_EMBEDDINGS_DEPLOYMENT_NAME=xxx \
+  --env AZURE_OPENAI_API_INSTANCE_NAME=xxx \
+  --env AZURE_OPENAI_API_VERSION=2023-03-15-preview \
+  chatemail:latest
+```
