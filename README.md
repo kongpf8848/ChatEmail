@@ -17,7 +17,7 @@
 1. 在代码根目录创建.env文件
 2. 参考文档[doc/env-vars.md](doc/env-vars.md)设置.env文件中的环境变量
 
-## 本地运行
+### 本地运行
 执行以下命令：
 ```shell
 npm install
