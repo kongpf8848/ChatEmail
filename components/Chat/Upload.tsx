@@ -65,12 +65,11 @@ export const Upload = ({
         return true;
     };
 
-    const supportFileType = "eml, msg";
+    const supportFileType = "eml";
 
     function validateFileType(fileType: string): boolean {
         switch (fileType) {
             case "eml":
-            case "msg":
                 return true;
             default:
                 return false;
@@ -148,7 +147,7 @@ export const Upload = ({
                               d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M15 13l-3-3m0 0l-3 3m3-3v12"></path>
                     </svg>
                     <p className="mb-2 text-sm text-gray-500 dark:text-gray-400"><span className="font-semibold">{t('Click to upload')}</span> {t('or drag and drop.')}</p>
-                    <p className="text-xs text-gray-500 dark:text-gray-400">{t('File supported types: .eml, .msg')}</p>
+                    <p className="text-xs text-gray-500 dark:text-gray-400">{t('File supported types: .eml')}</p>
                 </div>
                 <input id="dropzone-file" type="file" className="hidden" onChange={(e) => {
                     if (e.target.files && e.target.files[0]) {
