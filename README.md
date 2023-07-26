@@ -8,6 +8,12 @@
 
 </div>
 
+## 流程
+![flow.png](./doc/flow.png)
+
+## 截图
+![screenshot.png](./doc/screenshot.png)
+
 ## 使用
 
 ### 😊初始化向量数据库(Supabase)
