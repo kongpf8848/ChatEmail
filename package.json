@@ -1,7 +1,8 @@
 {
-  "name": "chat-files",
-  "version": "0.3.0",
+  "name": "chatemail",
+  "version": "0.1.0",
   "private": true,
+  "license":"Apache-2.0",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
