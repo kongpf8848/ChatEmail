@@ -2,9 +2,9 @@ export const DEFAULT_SYSTEM_PROMPT =
     "The following is a friendly conversation between a human and an AI. The AI is talkative and provides lots of specific details from its context. If the AI does not know the answer to a question, it truthfully says it does not know.";
 
 export const CHAT_FILES_MAX_SIZE =
-    parseInt(process.env.CHAT_FILES_MAX_SIZE || '') || 0;
+    parseInt(process.env.NEXT_PUBLIC_CHAT_FILES_MAX_SIZE || '') || 0;
 
-export const CHAT_FILES_UPLOAD_PATH = process.env.CHAT_FILES_UPLOAD_PATH;
+export const CHAT_FILES_UPLOAD_PATH = process.env.NEXT_PUBLIC_CHAT_FILES_UPLOAD_PATH;
 
 export const SUPABASE_KEY = process.env.SUPABASE_API_KEY
 // if (!SUPABASE_KEY) throw new Error(`Expected SUPABASE_API_KEY`)
