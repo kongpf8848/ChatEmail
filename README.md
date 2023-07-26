@@ -10,22 +10,22 @@
 
 ## 使用
 
-### 初始化向量数据库(Supabase)
+### 😊初始化向量数据库(Supabase)
 - 注册Supabase账户
   
-  [https://supabase.com/](https://supabase.com/)
+  🔗 [https://supabase.com/](https://supabase.com/)
 - 创建一个新项目
   
-  获取SUPABASE_API_URL和SUPABASE_API_KEY
+  获取`SUPABASE_API_URL`和`SUPABASE_API_KEY`
   
-  [Supabase.png](./doc/Supabase.png)
+  [supabase.png](./doc/supabase.png)
   
 
-### 设置环境变量
+### 😏设置环境变量
 1. 在代码根目录创建.env文件
 2. 参考文档[doc/env-vars.md](doc/env-vars.md)设置.env文件中的环境变量
 
-### 本地运行
+### 😁本地运行
 执行以下命令：
 ```shell
 npm install
