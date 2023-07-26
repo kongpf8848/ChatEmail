@@ -6,6 +6,8 @@
 
 🚀 和邮件对话，提取邮件摘要、翻译邮件、分析邮件类型等
 
+项目基于🦜️🔗[LangchainJS](https://github.com/hwchase17/langchainjs) 和 [ChatFiles](https://github.com/guangzhengli/ChatFiles) 构建
+
 </div>
 
 ## 流程
