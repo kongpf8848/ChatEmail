@@ -89,7 +89,7 @@ export const Upload = ({
         }).then(res => {
             if (!res.ok) {
                 console.log("save file failed:", fileName);
-                throw new Error(`save file failed:, ${fileName}`);
+                throw new Error(`save file failed, ${fileName},status:${res.status},message:${res.statusText}`);
             }
         }).then(async (data: any) => {
             console.log("save file success:", fileName);

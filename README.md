@@ -116,6 +116,7 @@ docker build -t chatemail .
 
 ```shell
 docker run -d -p 3000:3000 \
+  --name chatemail \
   --env SUPABASE_API_URL=${SUPABASE_API_URL} \
   --env SUPABASE_API_KEY=${SUPABASE_API_KEY} \
   --env OPENAI_TYPE=OPENAI \
@@ -128,6 +129,7 @@ docker run -d -p 3000:3000 \
 
 ```shell
 docker run -d -p 3000:3000 \
+  --name chatemail \
   --env SUPABASE_API_URL=${SUPABASE_API_URL} \
   --env SUPABASE_API_KEY=${SUPABASE_API_KEY} \
   --env OPENAI_TYPE=AZURE_OPENAI \
