@@ -85,11 +85,11 @@
 |------------------------|------------------------------------------------------------------------------------------------------------------|-------------------------------|
 | CHAT_FILES_UPLOAD_PATH     | 上传文件的存放路径                              | public/uploads                             |
 | CHAT_FILES_MAX_SIZE  | 上传文件的最大值，单位为字节，如果不设置或设置为0，则表示没有限制                            | 0 |
-| SUPABASE_API_URL | Supabase数据库的API地址                                         | https://xxxx.supabase.co           |
-| SUPABASE_API_KEY | Supabase数据库的API密钥 ||
+| SUPABASE_API_URL | Supabase的API地址，格式如https://xxxx.supabase.co                                          |          |
+| SUPABASE_API_KEY | Supabase的API密钥 ||
 | OPENAI_TYPE | OPENAI的类型，取值为OPENAI或AZURE_OPENAI        |OPENAI|
 | OPENAI_API_KEY | OPENAI的密钥       ||
-| OPENAI_API_MODEL | OPENAI的模型名称，如gpt-3.5-turbo/gpt-3.5-turbo-16k       |gpt-3.5-turbo|
+| OPENAI_API_MODEL | OPENAI的模型名称，如gpt-3.5-turbo、gpt-3.5-turbo-16k       |gpt-3.5-turbo|
 | AZURE_OPENAI_API_DEPLOYMENT_NAME | AZURE OPENAI的部署名称      ||
 | AZURE_OPENAI_API_EMBEDDINGS_DEPLOYMENT_NAME | AZURE OPENAI的嵌入模型部署名称 ||
 | AZURE_OPENAI_API_INSTANCE_NAME | AZURE OPENAI的实例名称 ||
