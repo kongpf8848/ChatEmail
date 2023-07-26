@@ -83,8 +83,8 @@
 
 | 名称                     | 描述                                                                                                               | 默认值                           |
 |------------------------|------------------------------------------------------------------------------------------------------------------|-------------------------------|
-| NEXT_PUBLIC_CHAT_FILES_UPLOAD_PATH     | 上传文件的存放路径                              | public/uploads                             |
-| NEXT_PUBLIC_CHAT_FILES_MAX_SIZE  | 上传文件的最大值，单位为字节，如果不设置或设置为0，则表示没有限制                            | 0 |
+| CHAT_FILES_UPLOAD_PATH     | 上传文件的存放路径                              | public/uploads                             |
+| CHAT_FILES_MAX_SIZE  | 上传文件的最大值，单位为字节，如果不设置或设置为0，则表示没有限制                            | 0 |
 | SUPABASE_API_URL | Supabase数据库的API地址                                         | https://xxxx.supabase.co           |
 | SUPABASE_API_KEY | Supabase数据库的API密钥 ||
 | OPENAI_TYPE | OPENAI的类型，取值为OPENAI或AZURE_OPENAI        |OPENAI|

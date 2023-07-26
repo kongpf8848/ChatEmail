@@ -2,7 +2,7 @@ import type {NextApiRequest, NextApiResponse} from 'next'
 import multer from "multer";
 import fs from 'fs';
 import AdmZip from 'adm-zip';
-import {NEXT_PUBLIC_CHAT_FILES_UPLOAD_PATH} from "@/utils/app/const";
+import {CHAT_FILES_UPLOAD_PATH} from "@/utils/app/const";
 
 export const config = {
     api: {
@@ -10,7 +10,7 @@ export const config = {
     }
 };
 
-const folderPath = NEXT_PUBLIC_CHAT_FILES_UPLOAD_PATH!;
+const folderPath = CHAT_FILES_UPLOAD_PATH!;
 
 const upload = multer({
     storage: multer.diskStorage({
