@@ -10,8 +10,16 @@
 
 ## 使用
 
-### 初始化向量数据库
-[Create a vector db on Supabase](doc/vectordb/supabase.md)
+### 初始化向量数据库(Supabase)
+- 注册Supabase账户
+  
+  [https://supabase.com/](https://supabase.com/)
+- 创建一个新项目
+  
+  获取SUPABASE_API_URL和SUPABASE_API_KEY
+  
+  [Supabase.png](./doc/Supabase.png)
+  
 
 ### 设置环境变量
 1. 在代码根目录创建.env文件
