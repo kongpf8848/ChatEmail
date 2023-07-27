@@ -109,14 +109,6 @@ npm run dev
 
 ### Docker部署
 
-构建镜像
-
-```shell
-docker build -t chatemail .
-```
-
-运行
-
 ```shell
 docker run -d -p 3000:3000 \
   --name chatemail \
@@ -127,7 +119,7 @@ docker run -d -p 3000:3000 \
   --env OPENAI_TYPE=OPENAI \
   --env OPENAI_API_KEY=${OPENAI_API_KEY} \
   --env OPENAI_API_MODEL=gpt-3.5-turbo \
-  chatemail:latest
+  rainboy2010/chatemail:latest
 ```
 
 或者
@@ -145,7 +137,7 @@ docker run -d -p 3000:3000 \
   --env AZURE_OPENAI_API_EMBEDDINGS_DEPLOYMENT_NAME=${AZURE_OPENAI_API_EMBEDDINGS_DEPLOYMENT_NAME} \
   --env AZURE_OPENAI_API_INSTANCE_NAME=${AZURE_OPENAI_API_INSTANCE_NAME} \
   --env AZURE_OPENAI_API_VERSION=2023-03-15-preview \
-  chatemail:latest
+  rainboy2010/chatemail:latest
 ```
 ### Docker compose 部署
 
