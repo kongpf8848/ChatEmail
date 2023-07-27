@@ -12,6 +12,9 @@ The project is built on 🦜️🔗[LangchainJS](https://github.com/hwchase17/la
 
 </div>
 
+## Online experience
+👉 [https://chatemail.kongpf8848.com](https://chatemail.kongpf8848.com)
+
 ## Flow
 ![flow.png](./doc/flow.png)
 
