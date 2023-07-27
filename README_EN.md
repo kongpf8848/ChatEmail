@@ -4,36 +4,36 @@
 
 [![license](https://img.shields.io/github/license/modelscope/modelscope.svg)](./LICENSE)
 
-中文 | [English](./README_EN.md)
+English | [中文](./README.md)
 
-和邮件对话😎，提取邮件摘要、翻译邮件、分析邮件类型、生成邮件回复等
+Conversation to Email 😎, Summary Email , Translate Email, Analyze Email Types, Generate Email Reply, etc.
 
-项目基于🦜️🔗[LangchainJS](https://github.com/hwchase17/langchainjs) 和 [ChatFiles](https://github.com/guangzhengli/ChatFiles) 构建
+The project is built on 🦜️🔗[LangchainJS](https://github.com/hwchase17/langchainjs) and [ChatFiles](https://github.com/guangzhengli/ChatFiles)
 
 </div>
 
-## 流程
+## Flow
 ![flow.png](./doc/flow.png)
 
-## 截图
+## Screenshot
 ![screenshot.png](./doc/screenshot.png)
 
-## 使用
+## Use
 
-### 😊初始化向量数据库(Supabase)
-- 注册Supabase账户
+### 😊Initializes the vector database(Supabase)
+- Register a Supabase account
   
   🔗 [https://supabase.com/](https://supabase.com/)
   
-- 创建一个新项目
+- Create a new project
   
-  获取`SUPABASE_API_URL`和`SUPABASE_API_KEY`
+  Get `SUPABASE_API_URL` and `SUPABASE_API_KEY`
   
   ![supabase.png](./doc/supabase.png)
 
-- 创建数据库表
+- Create database table
 
-  在数据库中运行以下语句:
+  Run this in your database:
   
   ```sql
     -- Enable the pgvector extension to work with embedding vectors
@@ -76,46 +76,48 @@
     $$;
     ```
 
-### 😏设置环境变量
-1. 在代码根目录生成.env文件
+### 😏Set environment variables
+1. Generate the.env file in the project root
   ```shell
   cp .env.sample .env
   ```
-2. 设置.env文件中的环境变量
+2. Set the environment variables in the.env file
 
-| 名称                     | 描述                                                                                                               | 默认值                           |
+| Name                     | Description                                                                                                               | Default value                           |
 |------------------------|------------------------------------------------------------------------------------------------------------------|-------------------------------|
-| NEXT_PUBLIC_CHAT_FILES_UPLOAD_PATH     | 上传文件的存放路径                              | public/uploads                             |
-| NEXT_PUBLIC_CHAT_FILES_MAX_SIZE  | 上传文件的最大值，单位为字节，如果不设置或设置为0，则表示没有限制                            | 0 |
-| SUPABASE_API_URL | Supabase的API地址，格式如https://xxxx.supabase.co                                          |          |
-| SUPABASE_API_KEY | Supabase的API密钥 ||
-| OPENAI_TYPE | OPENAI的类型，取值为OPENAI或AZURE_OPENAI        |OPENAI|
-| OPENAI_API_KEY | OPENAI的密钥       ||
-| OPENAI_API_MODEL | OPENAI的模型名称，如gpt-3.5-turbo、gpt-3.5-turbo-16k       |gpt-3.5-turbo|
-| AZURE_OPENAI_API_KEY | AZURE OPENAI的密钥       ||
-| AZURE_OPENAI_API_DEPLOYMENT_NAME | AZURE OPENAI的部署名称      ||
-| AZURE_OPENAI_API_EMBEDDINGS_DEPLOYMENT_NAME | AZURE OPENAI的嵌入模型部署名称 ||
-| AZURE_OPENAI_API_INSTANCE_NAME | AZURE OPENAI的实例名称 ||
-| AZURE_OPENAI_API_VERSION | AZURE OPENAI的API版本|2023-03-15-preview|
+| NEXT_PUBLIC_CHAT_FILES_UPLOAD_PATH     | the path for store uploaded files                              | public/uploads                             |
+| NEXT_PUBLIC_CHAT_FILES_MAX_SIZE  | The maximum number of files to be uploaded, in bytes. If this parameter is not set or is set to 0, there is no limit                            | 0 |
+| SUPABASE_API_URL | API endpoint for Supabase，format is:https://xxxx.supabase.co                                          |          |
+| SUPABASE_API_KEY | API key for Supabase ||
+| OPENAI_TYPE | The type for OPENAI，OPENAI or AZURE_OPENAI        |OPENAI|
+| OPENAI_API_KEY | API key for OPENAI       ||
+| OPENAI_API_MODEL | The model name for OPENAI，such gpt-3.5-turbo、gpt-3.5-turbo-16k       |gpt-3.5-turbo|
+| AZURE_OPENAI_API_KEY | API key for AZURE OPENAI        ||
+| AZURE_OPENAI_API_DEPLOYMENT_NAME | The deployment name for AZURE OPENAI       ||
+| AZURE_OPENAI_API_EMBEDDINGS_DEPLOYMENT_NAME | The embedded model deployment name for AZURE OPENAI ||
+| AZURE_OPENAI_API_INSTANCE_NAME | The instance name for AZURE OPENAI  ||
+| AZURE_OPENAI_API_VERSION | The API version for AZURE OPENAI|2023-03-15-preview|
    
-### 😁本地运行
-执行以下命令：
+### 😁Local run
+
+Run the following command:
+
 ```shell
 npm install
 
 npm run dev
 ```
-打开浏览器，访问[http://localhost:3000](http://localhost:300)
+Open your browser and visit [http://localhost:3000](http://localhost:300)
 
-### Docker部署
+### Deploy by docker 
 
-构建镜像
+Build Image
 
 ```shell
 docker build -t chatemail .
 ```
 
-运行
+Run
 
 ```shell
 docker run -d -p 3000:3000 \
@@ -130,7 +132,7 @@ docker run -d -p 3000:3000 \
   chatemail:latest
 ```
 
-或者
+or
 
 ```shell
 docker run -d -p 3000:3000 \
@@ -147,9 +149,9 @@ docker run -d -p 3000:3000 \
   --env AZURE_OPENAI_API_VERSION=2023-03-15-preview \
   chatemail:latest
 ```
-### Docker compose 部署
+### Deploy by docker compose
 
-docker-compose.yml文件如下：
+docker-compose.yml file is：
 
 ```yaml
 
@@ -179,7 +181,7 @@ services:
       AZURE_OPENAI_API_VERSION: 2023-03-15-preview
 ```
 
-运行：
+Run：
 
 ```shell
 docker compose up -d
