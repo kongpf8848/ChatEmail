@@ -4,6 +4,7 @@
 1. 下载[verification_code.eml](./example/verification_code.eml).
 2. 上传文件
 3. 一些好的问题示例
+   
   中文:
   - 总结一下邮件内容，用中文回答.
   - 邮件中提到的验证码是什么？
