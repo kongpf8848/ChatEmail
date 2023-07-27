@@ -2,20 +2,23 @@ version: '3'
 
 services:
   chat-email:
-    image: chatemail:latest
+    image: rainboy2010/chatemail:latest
     container_name: chatemail
     ports:
       - 3000:3000
     environment:
-      NEXT_PUBLIC_CHAT_FILES_MAX_SIZE: 10000000 #10MB
+      NEXT_PUBLIC_CHAT_FILES_MAX_SIZE: 10000000
       NEXT_PUBLIC_CHAT_FILES_UPLOAD_PATH: public/uploads
-      SUPABASE_API_URL: https://xxxx.supabase.co
-      SUPABASE_API_KEY: xxxx
-      OPENAI_TYPE: AZURE_OPENAI
+      # supabase parameters
+      SUPABASE_API_URL: <SUPABASE_API_URL>
+      SUPABASE_API_KEY: <SUPABASE_API_KEY>
+      OPENAI_TYPE: OPENAI
+      # if OPENAI_TYPE=OPENAI,please fill below openai parameters
       OPENAI_API_KEY: <OPENAI_API_KEY>
       OPENAI_API_MODEL: gpt-3.5-turbo
-      AZURE_OPENAI_API_KEY: xxx
-      AZURE_OPENAI_API_DEPLOYMENT_NAME: xxx
+      # if OPENAI_TYPE=AZURE_OPENAI,please fill below azure openai parameters
+      AZURE_OPENAI_API_KEY: <AZURE_OPENAI_API_KEY>
+      AZURE_OPENAI_API_DEPLOYMENT_NAME: <>
       AZURE_OPENAI_API_EMBEDDINGS_DEPLOYMENT_NAME: xxx
       AZURE_OPENAI_API_INSTANCE_NAME: xxx
       AZURE_OPENAI_API_VERSION: 2023-03-15-preview

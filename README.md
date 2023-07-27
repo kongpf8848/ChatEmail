@@ -144,3 +144,40 @@ docker run -d -p 3000:3000 \
   --env AZURE_OPENAI_API_VERSION=2023-03-15-preview \
   chatemail:latest
 ```
+### Docker compose 部署
+
+docker-compose.yml文件如下：
+
+```yaml
+
+version: '3'
+
+services:
+  chat-email:
+    image: rainboy2010/chatemail:latest
+    container_name: chatemail
+    ports:
+      - 3000:3000
+    environment:
+      NEXT_PUBLIC_CHAT_FILES_MAX_SIZE: 10000000
+      NEXT_PUBLIC_CHAT_FILES_UPLOAD_PATH: public/uploads
+      # supabase parameters
+      SUPABASE_API_URL: <SUPABASE_API_URL>
+      SUPABASE_API_KEY: <SUPABASE_API_KEY>
+      OPENAI_TYPE: OPENAI
+      # if OPENAI_TYPE=OPENAI,please fill below openai parameters
+      OPENAI_API_KEY: <OPENAI_API_KEY>
+      OPENAI_API_MODEL: gpt-3.5-turbo
+      # if OPENAI_TYPE=AZURE_OPENAI,please fill below azure openai parameters
+      AZURE_OPENAI_API_KEY: <AZURE_OPENAI_API_KEY>
+      AZURE_OPENAI_API_DEPLOYMENT_NAME: <>
+      AZURE_OPENAI_API_EMBEDDINGS_DEPLOYMENT_NAME: xxx
+      AZURE_OPENAI_API_INSTANCE_NAME: xxx
+      AZURE_OPENAI_API_VERSION: 2023-03-15-preview
+```
+
+运行：
+
+```shell
+docker compose up -d
+```
