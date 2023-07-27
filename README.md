@@ -117,6 +117,8 @@ docker build -t chatemail .
 ```shell
 docker run -d -p 3000:3000 \
   --name chatemail \
+  --env NEXT_PUBLIC_CHAT_FILES_MAX_SIZE=10000000 \
+  --env NEXT_PUBLIC_CHAT_FILES_UPLOAD_PATH=public/uploads \
   --env SUPABASE_API_URL=${SUPABASE_API_URL} \
   --env SUPABASE_API_KEY=${SUPABASE_API_KEY} \
   --env OPENAI_TYPE=OPENAI \
@@ -130,6 +132,8 @@ docker run -d -p 3000:3000 \
 ```shell
 docker run -d -p 3000:3000 \
   --name chatemail \
+  --env NEXT_PUBLIC_CHAT_FILES_MAX_SIZE=10000000 \
+  --env NEXT_PUBLIC_CHAT_FILES_UPLOAD_PATH=public/uploads \
   --env SUPABASE_API_URL=${SUPABASE_API_URL} \
   --env SUPABASE_API_KEY=${SUPABASE_API_KEY} \
   --env OPENAI_TYPE=AZURE_OPENAI \
