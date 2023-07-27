@@ -86,7 +86,7 @@ The project is built on 🦜️🔗[LangchainJS](https://github.com/hwchase17/la
 | Name                     | Description                                                                                                               | Default value                           |
 |------------------------|------------------------------------------------------------------------------------------------------------------|-------------------------------|
 | NEXT_PUBLIC_CHAT_FILES_UPLOAD_PATH     | the path for store uploaded files                              | public/uploads                             |
-| NEXT_PUBLIC_CHAT_FILES_MAX_SIZE  | The maximum number of files to be uploaded, in bytes. If this parameter is not set or is set to 0, there is no limit                            | 0 |
+| NEXT_PUBLIC_CHAT_FILES_MAX_SIZE  | The maximum size of files to be uploaded, in bytes. If this parameter is not set or is set to 0, there is no limit                            | 0 |
 | SUPABASE_API_URL | API endpoint for Supabase，format is:https://xxxx.supabase.co                                          |          |
 | SUPABASE_API_KEY | API key for Supabase ||
 | OPENAI_TYPE | The type for OPENAI，OPENAI or AZURE_OPENAI        |OPENAI|
